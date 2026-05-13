@@ -1,6 +1,6 @@
 # hypeGRL: Hyperbolic Graph Represenatation Learning
 
-Graph Representation Learning in hyperbolic (and Euclidean spaces),
+Graph Representation Learning in hyperbolic (and Euclidean) spaces,
 with principled support for unknown edges and streaming graph updates.
 
 ## Overview
