@@ -26,13 +26,16 @@ This is a work-in-progress, but the objective is to have these methods:
 | Hydra+ | Hyperboloid | No | No | Full refit | Full refit |
 | d-Mercator | Spherical | Yes | Yes | Full refit | Full refit |
 
-<!--
+
 ## Installation
 
 ```bash
-pip install hyperbolic-grl
+pip install git+https://github.com/git-artes/hypeGRL
 ```
 
+You may also clone the repo and create your own hyperbolic method. The library is designed to be modular an easily extendible. 
+
+<!--
 For development:
 
 ```bash
