@@ -147,7 +147,7 @@ def compute_results_distances(
     - ``distances`` the distance between embeddings corresponding to pairs of nodes in the ``unknown_edges`` set. 
 
     """
-    results = []
+    results = {}
     ground_truths = []
     distances = []
     for (m, n) in unknown_edges:
@@ -160,9 +160,9 @@ def compute_results_distances(
 
     predictions = (distances < threshold).astype(int)
         
-    results['actual_values'] = ground_truths
-    results['predicted_values'] = predictions
-    results['distances'] = distances
+    results['actual_values'] = np.array(ground_truths)
+    results['predicted_values'] = np.array(predictions)
+    results['distances'] = np.array(distances)
 
     return results
 

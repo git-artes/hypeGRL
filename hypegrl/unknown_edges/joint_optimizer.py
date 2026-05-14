@@ -23,6 +23,8 @@ import networkx as nx
 import numpy as np
 import torch
 
+import hypegrl.unknown_edges.imputation as imputation
+
 
 # ---------------------------------------------------------------------------
 # Adjacency helpers
@@ -198,7 +200,8 @@ def joint_optimize(
     # ── Unknown edge weights (sigmoid reparametrisation) ─────────────────
     if len(unknown_edges) > 0:
         if a_omega_init is None:
-            a_omega_init = np.full(len(unknown_edges), 0.5)
+            # a_omega_init = np.full(len(unknown_edges), 0.5)
+            a_omega_init = imputation.compute_a_omega_init(G, unknown_edges)
         a_omega_raw = torch.tensor(
             logit_init(a_omega_init),
             dtype=torch.float64, device=device_, requires_grad=True,
@@ -257,7 +260,7 @@ def joint_optimize(
             a_str = (
                 np.array2string(
                     a_omega.detach().cpu().numpy(),
-                    precision=4, suppress_small=True,
+                    precision=4, suppress_small=True, threshold=10
                 )
                 if a_omega_raw is not None
                 else "[]"
