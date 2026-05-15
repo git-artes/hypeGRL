@@ -8,7 +8,7 @@ Base Class
    :members:
    :show-inheritance:
 
-Poincaré Maps
+Poincare Maps
 -------------
 
 .. automodule:: hypegrl.embedders.poincare_maps

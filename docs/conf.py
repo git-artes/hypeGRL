@@ -21,6 +21,7 @@ autodoc_default_options = {
     "members": True,
     "undoc-members": False,
     "show-inheritance": True,
+    "inherited-members": True,
 }
 
 napoleon_numpy_docstring = True
@@ -38,3 +39,9 @@ html_static_path = ["_static"]
 
 exclude_patterns = ["_build", "**.ipynb_checkpoints"]
 nbsphinx_execute = "never"   # don't re-run notebooks on build
+
+autodoc_mock_imports = [
+    "torch",
+    "geoopt",
+    "networkx"
+    ]

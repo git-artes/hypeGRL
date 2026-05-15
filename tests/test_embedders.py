@@ -124,7 +124,7 @@ def test_embedder_embeddings_inside_disk(small_graph):
     emb.fit(small_graph)
     X = emb.embeddings()
     norms = np.linalg.norm(X, axis=1)
-    assert (norms < 1.0).all(), "All embeddings must lie inside the Poincaré disk"
+    assert (norms < 1.0).all(), "All embeddings must lie inside the Poincare disk"
 
 
 def test_embedder_loss_decreases(small_graph):

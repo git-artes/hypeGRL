@@ -63,7 +63,7 @@ class HyperbolicEmbedder(ABC):
         """
         Compute ``s(A)``: the structural (dis)similarity matrix used by
         this method (e.g. adjacency matrix for ASE, forest matrix for
-        Poincaré Maps).
+        Poincare Maps).
 
         Parameters
         ----------

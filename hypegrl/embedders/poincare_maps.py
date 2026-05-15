@@ -4,10 +4,15 @@ Poincare Maps embedder.
 Implements the encoder-decoder framework of Klimovskaia et al. (2020)
 with the extension to unknown edges from the joint optimisation framework.
 
-Structural similarity : Forest matrix  Q = (I + L)^{-1}
-Decoder               : Soft-min of hyperbolic distances
-                        A_hat_ij = softmax_j(-d_H(x_i,x_j)/gamma)
-Loss                  : Symmetric KL divergence sum_i SymKL(A_hat_i, Q_i)
+Model
+-----
+::
+
+    Structural similarity : Forest matrix  Q = (I + L)^(-1)
+    Decoder               : Soft-min of hyperbolic distances
+                             A_hat_ij = softmax_j(-d_H(x_i,x_j)/gamma)
+    Loss                  : Symmetric KL divergence
+                             sum_i SymKL(A_hat_i, Q_i)
 
 References
 ----------
@@ -75,7 +80,7 @@ def soft_decoder(X: torch.Tensor, gamma: float = 1.0) -> torch.Tensor:
     Parameters
     ----------
     X:
-        ``(N, d)`` embedding matrix on the PoincarÃ© disk.
+        ``(N, d)`` embedding matrix on the Poincare disk.
     gamma:
         Temperature parameter controlling the sharpness of the soft-min.
 
@@ -228,7 +233,6 @@ class PoincareMapsEmbedder(HyperbolicEmbedder):
         a_omega_init:
             Initial estimates for unknown edge weights in ``(0, 1)``.
             Defaults to ``0.5`` for all unknown edges.
-            TODO cambiar esto! Armar una funcion de inicializacion generica y defaultear a eso
 
         Returns
         -------
@@ -242,7 +246,6 @@ class PoincareMapsEmbedder(HyperbolicEmbedder):
         unknown_edges = unknown_edges or []
 
         if X_init is None:
-            # TODO cambiar esto! Armar una función de inicialización genérica y defualtear a eso
             X_init = np.random.randn(N, self.d) * 0.1
 
         # Closure capturing gamma for the loss function
@@ -333,7 +336,7 @@ class PoincareMapsEmbedder(HyperbolicEmbedder):
         Parameters
         ----------
         X:
-            ``(N, d)`` embedding matrix on the PoincarÃ© disk.
+            ``(N, d)`` embedding matrix on the Poincare disk.
 
         Returns
         -------

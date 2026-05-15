@@ -1,7 +1,7 @@
 Manifolds
 =========
 
-.. automodule:: hypergrl.manifolds
+.. automodule:: hypegrl.manifolds
    :members:
 
 .. automodule:: hypegrl.manifolds.poincare
