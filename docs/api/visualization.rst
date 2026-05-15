@@ -1,9 +1,6 @@
 Visualization
 =============
 
-.. automodule:: hypegrl.visualization
-   :members:
-
 .. automodule:: hypegrl.visualization.disk
    :members:
 
