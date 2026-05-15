@@ -35,7 +35,7 @@ pip install git+https://github.com/git-artes/hypeGRL
 
 You may also clone the repo and create your own hyperbolic method. The library is designed to be modular an easily extendible. 
 
-<!--
+
 For development:
 
 ```bash
@@ -43,7 +43,9 @@ git clone https://github.com/your-org/hyperbolic-grl
 cd hyperbolic-grl
 pip install -e ".[dev]"
 ```
--->
+
+This way, instead of copying files to your site-packages, pip creates a link to your local folder. Any code you change in that folder is instantly used by Python.
+
 ## Quick start
 
 ```python
