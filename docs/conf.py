@@ -1,10 +1,10 @@
-# Sphinx configuration for hyperbolic-grl documentation
+# Sphinx configuration for hypeGRL documentation
 import os, sys
 sys.path.insert(0, os.path.abspath(".."))
 
-project = "hyperbolic-grl"
-copyright = "2026, Federico Larroca, Paola Bermolen, Marcelo Fiori, Sofia Perez Casulo"
-author = "Federico Larroca, Paola Bermolen, Marcelo Fiori, Sofia Perez Casulo"
+project = "hypeGRL"
+copyright = "2026, Federico Larroca, Paola Bermolen, Marcelo Fiori, Sofia Perez Casulo, Bernardo Marenco"
+author = "Federico Larroca, Paola Bermolen, Marcelo Fiori, Sofia Perez Casulo, Bernardo Marenco"
 release = "0.1.0"
 
 extensions = [
