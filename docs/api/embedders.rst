@@ -1,6 +1,6 @@
 Embedders
 =========
 
-.. autoclass:: hypegrl.HyperbolicEmbedder
+.. automodule:: hypegrl.embedders
    :members:
    :show-inheritance:
