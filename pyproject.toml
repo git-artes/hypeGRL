@@ -63,8 +63,8 @@ all = ["hypegrl[dev,docs]"]
 [project.urls]
 Homepage = "https://github.com/git-artes/hypegrl"
 Documentation = "https://hypegrl.readthedocs.io"
-Repository = "https://github.com/your-org/hypegrl"
-Issues = "https://github.com/your-org/hypegrl/issues"
+Repository = "https://github.com/git-artes/hypegrl"
+Issues = "https://github.com/git-artes/hypegrl/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
