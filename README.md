@@ -39,8 +39,8 @@ You may also clone the repo and create your own hyperbolic method. The library i
 For development:
 
 ```bash
-git clone https://github.com/your-org/hyperbolic-grl
-cd hyperbolic-grl
+git clone https://github.com/git-artes/hypeGRL
+cd hypeGRL
 pip install -e ".[dev]"
 ```
 
